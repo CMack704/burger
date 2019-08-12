@@ -1,0 +1,11 @@
+body {
+    background-image: url('./img/food/food.png')
+};
+title {
+    text-align: center;
+    color: red;
+};
+img {
+    height: 200px;
+    width: 200px;
+};

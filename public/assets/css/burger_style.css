@@ -1,5 +1,5 @@
 body {
-    background-image: url('./img/food/food.png')
+    background-image: url('/assets/img/food/food.png');
 };
 title {
     text-align: center;

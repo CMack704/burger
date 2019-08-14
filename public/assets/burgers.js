@@ -3,7 +3,7 @@ $(function () {
         let id = $(this).data("id");
         let changeTrue = $(this).data("changeDevour");
         let devourState = {
-            sleepy: changeTrue
+            devour: changeTrue
         };
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
@@ -21,7 +21,7 @@ $(function () {
         event.preventDefault();
         var newBurger = {
             name: $("#burger-name").val().trim(),
-            devoured: flase
+            devoured: false
         };
         $.ajax("/api/cats", {
             type: "POST",

@@ -11,7 +11,7 @@ const burger = {
             cb(response);
         });
     },
-    update: function (condition, cb) {
+    update: function (objColVals, condition, cb) {
         dal.update('burgers', objColVals, condition, function (response) {
             cb(response);
         });

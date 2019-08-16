@@ -17,13 +17,14 @@ $(function () {
         );
     });
 
-    $(".create-burger").on("submit", function (event) {
+    $(".create-burger").on("click", function (event) {
+        console.log("made it")
         event.preventDefault();
         var newBurger = {
             name: $("#burger-name").val().trim(),
-            devoured: false
+            devoured: 0
         };
-        $.ajax("/api/cats", {
+        $.ajax("/api/burgers", {
             type: "POST",
             data: newBurger
         }).then(

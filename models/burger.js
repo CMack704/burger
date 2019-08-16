@@ -7,7 +7,8 @@ const burger = {
         });
     },
     create: function (val1, cb) {
-        dal.create('burgers', 'burger_name', val1, 'devoured', false, function (response) {
+        console.log(val1)
+        dal.create('burgers', 'burger_name', val1[0], 'devoured',val1[1], function (response) {
             cb(response);
         });
     },

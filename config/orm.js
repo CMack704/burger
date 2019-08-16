@@ -24,8 +24,9 @@ const dal = {
         });
     },
     create: function (table, col1, val1, col2, val2, cb) {
-        let queryString = 'INSERT INTO ' + table + ' (' + col1 + ', ' + col2 + ') VALUES (' + val1 + ', ' + val2 + ');'
-        connection.query(queryString, val, function (err, result) {
+        let queryString = 'INSERT INTO ' + table + ' (' + col1 + ', ' + col2 + ') VALUES ( ?, ?);'
+        console.log(queryString)
+        connection.query(queryString, [val1,val2], function (err, result) {
             if (err) throw err;
             cb(result);
         });
